@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            SPORT MEN TRÀ VINH
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li><a href="san-pham.html">Sản Phẩm</a></li>
+                <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                <li><a href="lien-he.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart-icon" onclick="openCart()">
+            🛒 Giỏ hàng
+            <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+    <section class="detail">
+
+        <img id="product-image" src="" alt="Sản phẩm">
+
+        <div class="detail-info">
+
+            <h1 id="product-name"></h1>
+
+            <p class="price" id="product-price"></p>
+
+            <p id="product-description"></p>
+
+            <br>
+
+            <button
+                class="action-btn cart-btn"
+                onclick="addCurrentProduct()">
+                Thêm Vào Giỏ Hàng
+            </button>
+
+            <button
+                class="action-btn buy-now-btn"
+                onclick="buyCurrentProduct()">
+                Mua Ngay
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Popup giỏ hàng -->
+
+    <div id="cartModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>🛒 Giỏ Hàng</h2>
+
+            <div id="cart-items"></div>
+
+            <h3>
+                Tổng tiền:
+                <span id="total-price">0đ</span>
+            </h3>
+
+            <div class="modal-buttons">
+
+                <button onclick="closeCart()">
+                    Đóng
+                </button>
+
+                <button class="buy-btn" onclick="checkout()">
+                    Mua Ngay
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <h3>SPORT MEN TRÀ VINH</h3>
+
+        <p>Địa chỉ: TP Trà Vinh</p>
+
+        <p>Hotline: 0123456789</p>
+
+        <p>Email: sporttravinh@gmail.com</p>
+
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - SPORT MEN TRÀ VINH</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            SPORT MEN TRÀ VINH
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Trang Chủ</a>
+                </li>
+
+                <li>
+                    <a href="san-pham.html">Sản Phẩm</a>
+                </li>
+
+                <li>
+                    <a href="gioi-thieu.html">Giới Thiệu</a>
+                </li>
+
+                <li>
+                    <a href="lien-he.html">Liên Hệ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="cart-icon" onclick="openCart()">
+            🛒 Giỏ hàng
+            <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+    <section class="products">
+
+        <h2>TẤT CẢ SẢN PHẨM</h2>
+
+        <div class="product-container">
+
+            <!-- Sản phẩm 1 -->
+            <div class="product">
+                <img src="../assets/ao1.jpg" alt="Áo Bóng Đá Nam">
+                <h3>Áo Bóng Đá Nam</h3>
+                <p class="price">250.000đ</p>
+
+                <a href="chi-tiet.html?id=1" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="product">
+                <img src="../assets/quan1.jpg" alt="Quần Jogger Thể Thao">
+                <h3>Quần Jogger Thể Thao</h3>
+                <p class="price">199.000đ</p>
+
+                <a href="chi-tiet.html?id=2" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="product">
+                <img src="../assets/giay1.jpg" alt="Giày Adidas Predator">
+                <h3>Giày Adidas Predator</h3>
+                <p class="price">890.000đ</p>
+
+                <a href="chi-tiet.html?id=3" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 4 -->
+            <div class="product">
+                <img src="../assets/bo1.jpg" alt="Bộ Thể Thao Nam">
+                <h3>Bộ Thể Thao Nam</h3>
+                <p class="price">450.000đ</p>
+
+                <a href="chi-tiet.html?id=4" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 5 -->
+            <div class="product">
+                <img src="../assets/ao2.jpg" alt="Áo Polo Thể Thao">
+                <h3>Áo Polo Thể Thao</h3>
+                <p class="price">299.000đ</p>
+
+                <a href="chi-tiet.html?id=5" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 6 -->
+            <div class="product">
+                <img src="../assets/giay2.jpg" alt="Giày Chạy Bộ Nike">
+                <h3>Giày Chạy Bộ Nike</h3>
+                <p class="price">1.250.000đ</p>
+
+                <a href="chi-tiet.html?id=6" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+            <!-- Sản phẩm 7 -->
+            <div class="product">
+                <img src="../assets/tui1.jpg" alt="Túi Thể Thao Adidas">
+                <h3>Túi Thể Thao Adidas</h3>
+                <p class="price">350.000đ</p>
+
+                <a href="chi-tiet.html?id=7" class="btn">
+                    Xem Chi Tiết
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Popup Giỏ Hàng -->
+
+    <div id="cartModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>🛒 Giỏ Hàng</h2>
+
+            <div id="cart-items"></div>
+
+            <h3>
+                Tổng tiền:
+                <span id="total-price">0đ</span>
+            </h3>
+
+            <div class="modal-buttons">
+
+                <button onclick="closeCart()">
+                    Đóng
+                </button>
+
+                <button class="buy-btn" onclick="checkout()">
+                    Mua Ngay
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <h3>SPORT MEN TRÀ VINH</h3>
+
+        <p>Địa chỉ: TP Trà Vinh</p>
+
+        <p>Hotline: 0123456789</p>
+
+        <p>Email: sporttravinh@gmail.com</p>
+
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

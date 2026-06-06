@@ -1,0 +1,583 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+
+header{
+    background:#0d6efd;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* GIỎ HÀNG */
+
+.cart-icon{
+    background:white;
+    color:#0d6efd;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.cart-icon:hover{
+    transform:scale(1.05);
+}
+
+#cart-count{
+    background:red;
+    color:white;
+    padding:3px 8px;
+    border-radius:50%;
+    margin-left:5px;
+}
+
+/* BANNER */
+
+.banner{
+    position:relative;
+    height:500px;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.5);
+    color:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.banner-content h1{
+    margin-bottom:10px;
+}
+
+/* SẢN PHẨM */
+
+.products{
+    padding:60px;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0d6efd;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.product{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+}
+
+.product img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    margin-top:15px;
+}
+
+.price{
+    color:red;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#0d6efd;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#084dbf;
+}
+
+.view-all{
+    text-align:center;
+    margin-top:40px;
+}
+
+/* POPUP GIỎ HÀNG */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-content{
+    background:white;
+    width:600px;
+    max-width:95%;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+    color:#0d6efd;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8f9fa;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.cart-item h4{
+    margin-bottom:5px;
+}
+
+.cart-item button{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.cart-item button:hover{
+    background:#b02a37;
+}
+
+#total-price{
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.modal-buttons{
+    margin-top:25px;
+    text-align:center;
+}
+
+.modal-buttons button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.modal-buttons button:first-child{
+    background:#6c757d;
+    color:white;
+}
+
+.buy-btn{
+    background:#dc3545;
+    color:white;
+    margin-left:10px;
+}
+
+.buy-btn:hover{
+    background:#b02a37;
+}
+
+/* CHI TIẾT SẢN PHẨM */
+
+.detail{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.detail img{
+    width:450px;
+    max-width:100%;
+    border-radius:10px;
+}
+
+.detail-info{
+    flex:1;
+}
+
+.detail-info h1{
+    margin-bottom:15px;
+    color:#0d6efd;
+}
+
+.detail-info p{
+    line-height:1.8;
+}
+
+.action-btn{
+    padding:12px 25px;
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:8px;
+    margin-right:10px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.cart-btn{
+    background:#28a745;
+}
+
+.cart-btn:hover{
+    background:#1e7e34;
+}
+
+.buy-now-btn{
+    background:#dc3545;
+}
+
+.buy-now-btn:hover{
+    background:#b02a37;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer p{
+    margin-top:5px;
+}
+
+/* TRANG CHI TIẾT */
+
+.detail{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.detail img{
+    width:400px;
+    max-width:100%;
+    border-radius:10px;
+}
+
+.detail-info{
+    flex:1;
+}
+
+.detail-info h1{
+    margin-bottom:15px;
+}
+
+.detail-info .price{
+    margin-bottom:20px;
+}
+
+.action-btn{
+    padding:12px 25px;
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    margin-right:10px;
+    font-size:16px;
+}
+
+.cart-btn{
+    background:#28a745;
+}
+
+.buy-now-btn{
+    background:#dc3545;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .banner{
+        height:300px;
+    }
+
+    .products{
+        padding:20px;
+    }
+
+    .detail{
+        flex-direction:column;
+    }
+
+    .detail img{
+        width:100%;
+    }
+}
+
+.cart-item{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h4{
+    margin-bottom:8px;
+}
+
+.cart-info p{
+    color:red;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.cart-info button{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* GIỚI THIỆU */
+
+.about-banner{
+    height:450px;
+    background:url("../assets/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-overlay{
+    background:rgba(0,0,0,.6);
+    padding:40px;
+    border-radius:15px;
+    color:white;
+    text-align:center;
+}
+
+.about-content{
+    width:80%;
+    margin:60px auto;
+    text-align:center;
+}
+
+.about-content p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.features{
+    padding:60px;
+    background:white;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature-box{
+    background:#f5f5f5;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:60px;
+    background:#0d6efd;
+    color:white;
+}
+
+.stat{
+    text-align:center;
+}
+
+/* LIÊN HỆ */
+
+.contact-section{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.contact-section h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.contact-info h3{
+    margin-top:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+.contact-form textarea{
+    height:150px;
+}
+
+.contact-form button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#084dbf;
+}

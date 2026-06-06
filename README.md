@@ -175,10 +175,10 @@ Sinh viên cần nộp đầy đủ các nội dung sau:
 Sinh viên cập nhật thông tin cá nhân tại đây:
 
 ```text
-Họ và tên:
-Mã số sinh viên:
-Lớp:
-Tên đề tài:
+Họ và tên:Trần Thanh Phước
+Mã số sinh viên:110124152
+Lớp:DA24TTA
+Tên đề tài:Thiết Kế Website Shop Đồ Thể Thao Nam Trà Vinh
 Liên kết GitHub repository:
 Liên kết GitHub Pages:
 ```
