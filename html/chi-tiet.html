@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Sản Phẩm</title>
-
+    <title>Chi Tiết Sản Phẩm - SPORT MEN TRÀ VINH</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-
     <header>
-
-        <div class="logo">
-            SPORT MEN TRÀ VINH
-        </div>
+        <div class="logo">SPORT MEN TRÀ VINH</div>
 
         <nav>
             <ul>
@@ -26,88 +20,134 @@
             </ul>
         </nav>
 
-        <div class="cart-icon" onclick="openCart()">
-            🛒 Giỏ hàng
-            <span id="cart-count">0</span>
-        </div>
-
+        <button class="cart-icon" onclick="openCart()">
+            🛒 Giỏ hàng <span id="cart-count">0</span>
+        </button>
     </header>
 
-    <section class="detail">
+    <main>
+        <section class="detail">
+            <div class="detail-image">
+                <img id="product-image" src="" alt="Sản phẩm">
+            </div>
 
-        <img id="product-image" src="" alt="Sản phẩm">
+            <div class="detail-info">
+                <p class="breadcrumb">Trang chủ / Sản phẩm / Chi tiết</p>
 
-        <div class="detail-info">
+                <h1 id="product-name"></h1>
 
-            <h1 id="product-name"></h1>
+                <p class="price" id="product-price"></p>
 
-            <p class="price" id="product-price"></p>
+                <p id="product-description" class="product-desc"></p>
+        <ul class="product-features">
+                <li>✔ Chất liệu Polyester cao cấp</li>
+                <li>✔ Thấm hút mồ hôi nhanh</li>
+                <li>✔ Co giãn 4 chiều, thoải mái vận động</li>
+                <li>✔ Form thể thao trẻ trung, hiện đại</li>
+                <li>✔ Phù hợp tập luyện, thi đấu và mặc thường ngày</li>
+</ul>
 
-            <p id="product-description"></p>
+                <div class="size-box">
+                    <h4>Chọn kích thước</h4>
 
-            <br>
+                    <div class="sizes">
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                    </div>
+                </div>
 
-            <button
-                class="action-btn cart-btn"
-                onclick="addCurrentProduct()">
-                Thêm Vào Giỏ Hàng
-            </button>
+                <div class="detail-actions">
+                    <button class="action-btn cart-btn" onclick="addCurrentProduct()">
+                        Thêm Vào Giỏ Hàng
+                    </button>
 
-            <button
-                class="action-btn buy-now-btn"
-                onclick="buyCurrentProduct()">
-                Mua Ngay
-            </button>
+                    <button class="action-btn buy-now-btn" onclick="buyCurrentProduct()">
+                        Mua Ngay
+                    </button>
+                </div>
 
-        </div>
+                <div class="service-box">
+                    <p>✓ Giao hàng toàn quốc</p>
+                    <p>✓ Đổi trả trong 7 ngày</p>
+                    <p>✓ Sản phẩm thể thao chất lượng cao</p>
+                    <p>✓ Tư vấn size miễn phí</p>
+                </div>
+            </div>
+        </section>
 
-    </section>
+        <section class="product-info-section">
+            <h2>THÔNG TIN SẢN PHẨM</h2>
 
-    <!-- Popup giỏ hàng -->
+            <div class="info-grid">
+                <div>
+                    <h3>Chất liệu</h3>
+                    <p>Vải thể thao thoáng khí, co giãn tốt, phù hợp luyện tập và mặc hằng ngày.</p>
+                </div>
+
+                <div>
+                    <h3>Phong cách</h3>
+                    <p>Thiết kế năng động, nam tính, dễ phối với nhiều trang phục thể thao khác.</p>
+                </div>
+
+                <div>
+                    <h3>Bảo quản</h3>
+                    <p>Giặt nhẹ, không dùng chất tẩy mạnh, phơi nơi thoáng mát để giữ form sản phẩm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products related-products">
+            <h2>SẢN PHẨM GỢI Ý</h2>
+
+            <div class="product-container">
+                <div class="product">
+                    <img src="../assets/ao1.jpg" alt="Áo Bóng Đá Nam">
+                    <h3>Áo Bóng Đá Nam</h3>
+                    <p class="price">250.000đ</p>
+                    <a href="chi-tiet.html?id=1" class="btn">Xem Chi Tiết</a>
+                </div>
+
+                <div class="product">
+                    <img src="../assets/quan1.jpg" alt="Quần Jogger Thể Thao">
+                    <h3>Quần Jogger Thể Thao</h3>
+                    <p class="price">199.000đ</p>
+                    <a href="chi-tiet.html?id=2" class="btn">Xem Chi Tiết</a>
+                </div>
+
+                <div class="product">
+                    <img src="../assets/giay1.jpg" alt="Giày Adidas Predator">
+                    <h3>Giày Adidas Predator</h3>
+                    <p class="price">890.000đ</p>
+                    <a href="chi-tiet.html?id=3" class="btn">Xem Chi Tiết</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <div id="cartModal" class="modal">
-
         <div class="modal-content">
-
             <h2>🛒 Giỏ Hàng</h2>
 
             <div id="cart-items"></div>
 
-            <h3>
-                Tổng tiền:
-                <span id="total-price">0đ</span>
-            </h3>
+            <h3>Tổng tiền: <span id="total-price">0đ</span></h3>
 
             <div class="modal-buttons">
-
-                <button onclick="closeCart()">
-                    Đóng
-                </button>
-
-                <button class="buy-btn" onclick="checkout()">
-                    Mua Ngay
-                </button>
-
+                <button onclick="closeCart()">Đóng</button>
+                <button class="buy-btn" onclick="checkout()">Mua Ngay</button>
             </div>
-
         </div>
-
     </div>
 
     <footer>
-
         <h3>SPORT MEN TRÀ VINH</h3>
-
         <p>Địa chỉ: TP Trà Vinh</p>
-
         <p>Hotline: 0123456789</p>
-
         <p>Email: sporttravinh@gmail.com</p>
-
     </footer>
 
     <script src="../js/script.js"></script>
-
 </body>
-
 </html>

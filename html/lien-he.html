@@ -1,162 +1,117 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liên Hệ - SPORT MEN TRÀ VINH</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - SPORT MEN TRÀ VINH</title>
 
-<link rel="stylesheet" href="../css/style.css">
-
-<style>
-
-.contact-banner{
-    background:linear-gradient(135deg,#0d6efd,#00bfff);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.contact-banner h1{
-    font-size:50px;
-}
-
-.contact-container{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.contact-info,
-.contact-form{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.contact-info h2,
-.contact-form h2{
-    color:#0d6efd;
-    margin-bottom:20px;
-}
-
-.contact-info p{
-    margin-bottom:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:5px;
-}
-
-.contact-form button{
-    background:#0d6efd;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.contact-form button:hover{
-    background:#084dbf;
-}
-
-@media(max-width:768px){
-
-.contact-container{
-    grid-template-columns:1fr;
-}
-
-}
-
-</style>
-
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
 <header>
+    <div class="logo">SPORT MEN TRÀ VINH</div>
 
-<div class="logo">
-SPORT MEN TRÀ VINH
-</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="san-pham.html">Sản Phẩm</a></li>
+            <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+            <li><a href="lien-he.html">Liên Hệ</a></li>
+        </ul>
+    </nav>
 
-<nav>
-<ul>
-<li><a href="../index.html">Trang Chủ</a></li>
-<li><a href="san-pham.html">Sản Phẩm</a></li>
-<li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-<li><a href="lien-he.html">Liên Hệ</a></li>
-</ul>
-</nav>
-
+    <button class="cart-icon" onclick="openCart()">
+        🛒 Giỏ hàng <span id="cart-count">0</span>
+    </button>
 </header>
 
-<section class="contact-banner">
+<section class="contact-hero"></section>
 
-<h1>LIÊN HỆ</h1>
+<section class="contact-section">
 
-<p>Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+    <div class="contact-info-card">
+
+        <h2>THÔNG TIN LIÊN HỆ</h2>
+
+        <div class="contact-item">
+            📍 TP Trà Vinh
+        </div>
+
+        <div class="contact-item">
+            📞 0123456789
+        </div>
+
+        <div class="contact-item">
+            📧 sporttravinh@gmail.com
+        </div>
+
+        <div class="contact-item">
+            🕒 08:00 - 22:00
+        </div>
+
+        <div class="map-box">
+            Google Maps
+        </div>
+
+    </div>
+
+    <div class="contact-form-card">
+
+        <h2>GỬI TIN NHẮN</h2>
+
+        <form onsubmit="event.preventDefault(); showMessage('Gửi liên hệ thành công!');">
+
+            <input type="text" placeholder="Họ và tên" required>
+
+            <input type="email" placeholder="Email" required>
+
+            <input type="tel" placeholder="Số điện thoại" required>
+
+            <textarea rows="6" placeholder="Nội dung liên hệ" required></textarea>
+
+            <button type="submit" class="btn">
+                Gửi Liên Hệ
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
 
-<div class="contact-container">
+<div id="cartModal" class="modal">
+    <div class="modal-content">
 
-<div class="contact-info">
+        <h2>🛒 Giỏ Hàng</h2>
 
-<h2>Thông Tin Liên Hệ</h2>
+        <div id="cart-items"></div>
 
-<p>📍 Địa chỉ: TP Trà Vinh</p>
+        <h3>
+            Tổng tiền:
+            <span id="total-price">0đ</span>
+        </h3>
 
-<p>📞 Hotline: 0123456789</p>
+        <div class="modal-buttons">
+            <button onclick="closeCart()">Đóng</button>
+            <button class="buy-btn" onclick="checkout()">Mua Ngay</button>
+        </div>
 
-<p>📧 Email: sporttravinh@gmail.com</p>
-
-<p>🕒 Giờ mở cửa: 08:00 - 22:00</p>
-
-</div>
-
-<div class="contact-form">
-
-<h2>Gửi Liên Hệ</h2>
-
-<form>
-
-<input type="text" placeholder="Họ và tên">
-
-<input type="email" placeholder="Email">
-
-<input type="text" placeholder="Số điện thoại">
-
-<textarea rows="5" placeholder="Nội dung"></textarea>
-
-<button type="submit">
-Gửi Liên Hệ
-</button>
-
-</form>
-
-</div>
-
+    </div>
 </div>
 
 <footer>
+    <h3>SPORT MEN TRÀ VINH</h3>
 
-<h3>SPORT MEN TRÀ VINH</h3>
+    <p>Địa chỉ: TP Trà Vinh</p>
 
-<p>Địa chỉ: TP Trà Vinh</p>
+    <p>Hotline: 0123456789</p>
 
-<p>Hotline: 0123456789</p>
-
+    <p>Email: sporttravinh@gmail.com</p>
 </footer>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>

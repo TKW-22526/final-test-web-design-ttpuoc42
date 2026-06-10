@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - SPORT MEN TRÀ VINH</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">SPORT MEN TRÀ VINH</div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="san-pham.html">Sản Phẩm</a></li>
+            <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+            <li><a href="lien-he.html">Liên Hệ</a></li>
+        </ul>
+    </nav>
+
+    <button class="cart-icon" onclick="openCart()">
+        🛒 Giỏ hàng <span id="cart-count">0</span>
+    </button>
+</header>
+
+<section class="login-section">
+    <div class="login-box">
+        <h1>ĐĂNG KÝ</h1>
+        <p>Tạo tài khoản để mua sắm nhanh hơn</p>
+
+        <form onsubmit="registerUser(event)">
+            <input type="text" id="register-name" placeholder="Họ và tên" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="tel" id="register-phone" placeholder="Số điện thoại" required>
+            <input type="password" id="register-password" placeholder="Mật khẩu" required>
+            <input type="password" id="register-confirm" placeholder="Nhập lại mật khẩu" required>
+
+            <button type="submit" class="btn">Đăng ký</button>
+        </form>
+
+        <p class="form-link">
+            Đã có tài khoản?
+            <a href="dang-nhap.html">Đăng nhập ngay</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <h3>SPORT MEN TRÀ VINH</h3>
+    <p>Địa chỉ: TP Trà Vinh</p>
+    <p>Hotline: 0123456789</p>
+    <p>Email: sporttravinh@gmail.com</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

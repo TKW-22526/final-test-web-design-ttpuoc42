@@ -1,194 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giới Thiệu - SPORT MEN TRÀ VINH</title>
-
-<link rel="stylesheet" href="../css/style.css">
-
-<style>
-
-.about-banner{
-    height:350px;
-    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url("../assets/banner2.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    text-align:center;
-}
-
-.about-banner h1{
-    font-size:50px;
-}
-
-.about-container{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
-}
-
-.about-card{
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    margin-bottom:30px;
-}
-
-.about-card h2{
-    color:#0d6efd;
-    margin-bottom:20px;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.about-box{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.about-box h3{
-    color:#0d6efd;
-    margin-bottom:10px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
-
-.stat-box{
-    background:#0d6efd;
-    color:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-}
-
-.stat-box h2{
-    font-size:40px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - SPORT MEN TRÀ VINH</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+    <header>
+        <div class="logo">SPORT MEN TRÀ VINH</div>
 
-<header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li><a href="san-pham.html">Sản Phẩm</a></li>
+                <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                <li><a href="lien-he.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
 
-<div class="logo">
-SPORT MEN TRÀ VINH
-</div>
+        <button class="cart-icon" onclick="openCart()">
+            🛒 Giỏ hàng <span id="cart-count">0</span>
+        </button>
+    </header>
 
-<nav>
-<ul>
-<li><a href="../index.html">Trang Chủ</a></li>
-<li><a href="san-pham.html">Sản Phẩm</a></li>
-<li><a href="gioi-thieu.html">Giới Thiệu</a></li>
-<li><a href="lien-he.html">Liên Hệ</a></li>
-</ul>
-</nav>
+    <main>
+    <section class="about-hero"></section>
 
-</header>
+        <section class="about-container">
+            <div class="about-card">
+                <h2>CHÚNG TÔI LÀ AI?</h2>
+                <p>
+                    SPORT MEN TRÀ VINH chuyên cung cấp quần áo, giày và phụ kiện thể thao dành cho nam giới.
+                    Chúng tôi hướng đến phong cách trẻ trung, khỏe khoắn, phù hợp cho tập luyện, đi chơi và sử dụng hằng ngày.
+                </p>
 
-<section class="about-banner">
-<div>
-<h1>VỀ CHÚNG TÔI</h1>
-<p>Thời trang thể thao nam hàng đầu tại Trà Vinh</p>
-</div>
-</section>
+                <p>
+                    Với tiêu chí chất lượng tốt, giá hợp lý và phục vụ tận tâm, SPORT MEN TRÀ VINH mong muốn trở thành
+                    địa chỉ mua sắm đồ thể thao đáng tin cậy tại Trà Vinh.
+                </p>
+            </div>
 
-<div class="about-container">
+            <div class="about-grid">
+                <div class="about-box">
+                    <h3>🏆 Chất lượng</h3>
+                    <p>Sản phẩm được chọn lọc kỹ, form đẹp, chất liệu thoải mái.</p>
+                </div>
 
-<div class="about-card">
+                <div class="about-box">
+                    <h3>🚚 Giao hàng</h3>
+                    <p>Hỗ trợ giao hàng nhanh chóng, tiện lợi cho khách hàng.</p>
+                </div>
 
-<h2>SPORT MEN TRÀ VINH</h2>
+                <div class="about-box">
+                    <h3>💰 Giá hợp lý</h3>
+                    <p>Mức giá phù hợp với học sinh, sinh viên và người đi làm.</p>
+                </div>
 
-<p>
-SPORT MEN TRÀ VINH chuyên cung cấp các sản phẩm thể thao nam
-chất lượng cao như áo bóng đá, giày thể thao, quần jogger,
-túi thể thao và nhiều phụ kiện khác.
-</p>
+                <div class="about-box">
+                    <h3>❤️ Tận tâm</h3>
+                    <p>Tư vấn size, mẫu mã và hỗ trợ khách hàng chu đáo.</p>
+                </div>
+            </div>
 
-<br>
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>500+</h2>
+                    <p>Khách hàng tin tưởng</p>
+                </div>
 
-<p>
-Chúng tôi luôn đặt sự hài lòng của khách hàng lên hàng đầu,
-mang đến sản phẩm đẹp, giá hợp lý và dịch vụ tận tâm.
-</p>
+                <div class="stat-box">
+                    <h2>100+</h2>
+                    <p>Sản phẩm thể thao</p>
+                </div>
 
-</div>
+                <div class="stat-box">
+                    <h2>5★</h2>
+                    <p>Đánh giá tích cực</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<div class="about-grid">
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h2>🛒 Giỏ Hàng</h2>
+            <div id="cart-items"></div>
 
-<div class="about-box">
-<h3>🏆 Chất Lượng</h3>
-<p>Sản phẩm chính hãng, bền đẹp.</p>
-</div>
+            <h3>Tổng tiền: <span id="total-price">0đ</span></h3>
 
-<div class="about-box">
-<h3>🚚 Giao Hàng</h3>
-<p>Giao hàng nhanh toàn quốc.</p>
-</div>
+            <div class="modal-buttons">
+                <button onclick="closeCart()">Đóng</button>
+                <button class="buy-btn" onclick="checkout()">Mua Ngay</button>
+            </div>
+        </div>
+    </div>
 
-<div class="about-box">
-<h3>💰 Giá Tốt</h3>
-<p>Nhiều ưu đãi hấp dẫn.</p>
-</div>
+    <footer>
+        <h3>SPORT MEN TRÀ VINH</h3>
+        <p>Địa chỉ: TP Trà Vinh</p>
+        <p>Hotline: 0123456789</p>
+        <p>Email: sporttravinh@gmail.com</p>
+    </footer>
 
-<div class="about-box">
-<h3>❤️ Hỗ Trợ</h3>
-<p>Tư vấn tận tình 24/7.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<div class="stats">
-
-<div class="stat-box">
-<h2>500+</h2>
-<p>Khách Hàng</p>
-</div>
-
-<div class="stat-box">
-<h2>100+</h2>
-<p>Sản Phẩm</p>
-</div>
-
-<div class="stat-box">
-<h2>5★</h2>
-<p>Đánh Giá</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-<h3>SPORT MEN TRÀ VINH</h3>
-
-<p>Địa chỉ: TP Trà Vinh</p>
-
-<p>Hotline: 0123456789</p>
-
-</footer>
-
+    <script src="../js/script.js"></script>
 </body>
 </html>
